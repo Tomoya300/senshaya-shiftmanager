@@ -58,12 +58,15 @@ npm run dev
 
 ## 環境変数
 
-| 変数名                          | 用途                                           | 必要なタイミング         |
-| ------------------------------- | ---------------------------------------------- | ------------------------ |
-| `NEXT_PUBLIC_SUPABASE_URL`      | Supabase プロジェクト URL                      | 常時                     |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase Anon Key                              | 常時                     |
-| `SUPABASE_SERVICE_ROLE_KEY`     | Supabase Service Role Key (サーバーサイドのみ) | 管理機能実装後           |
-| `SHORTCUT_API_TOKEN`            | iOS ショートカット認証トークン                 | ショートカット連携実装後 |
+| 変数名                          | 用途                                              | 必要なタイミング         |
+| ------------------------------- | ------------------------------------------------- | ------------------------ |
+| `NEXT_PUBLIC_SUPABASE_URL`      | Supabase プロジェクト URL                         | 常時                     |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase Anon Key                                 | 常時                     |
+| `NEXT_PUBLIC_SITE_URL`          | パスワードリセットメール内のリダイレクト先絶対URL | 常時                     |
+| `SUPABASE_SERVICE_ROLE_KEY`     | Supabase Service Role Key (サーバーサイドのみ)    | 管理機能実装後           |
+| `SHORTCUT_API_TOKEN`            | iOS ショートカット認証トークン                    | ショートカット連携実装後 |
+
+`NEXT_PUBLIC_SITE_URL` の値: 開発時は `http://localhost:3000`、本番は `https://<project>.vercel.app` を指定。
 
 新しい変数を追加する場合は `.env.example` も更新してください。
 
