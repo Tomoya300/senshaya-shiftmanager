@@ -10,13 +10,11 @@ export default async function TestConnectionPage() {
   const ok = !error
 
   return (
-    <main className="p-8 font-mono space-y-4">
+    <main className="space-y-4 p-8 font-mono">
       <h1 className="text-2xl font-bold">Supabase Connection Test</h1>
       <div>
         <span className="font-bold">Status: </span>
-        <span className={ok ? 'text-green-600' : 'text-red-600'}>
-          {ok ? 'OK' : 'NG'}
-        </span>
+        <span className={ok ? 'text-green-600' : 'text-red-600'}>{ok ? 'OK' : 'NG'}</span>
       </div>
       <div>
         <span className="font-bold">URL: </span>
@@ -27,9 +25,7 @@ export default async function TestConnectionPage() {
         {data.session ? 'present' : 'none (expected — no user yet)'}
       </div>
       {error && (
-        <pre className="p-4 bg-red-50 text-red-800 text-sm overflow-auto">
-          {error.message}
-        </pre>
+        <pre className="overflow-auto bg-red-50 p-4 text-sm text-red-800">{error.message}</pre>
       )}
     </main>
   )
